@@ -43,6 +43,7 @@ class APIController extends Controller
             foreach (Auth::user()->pills()->get() as $pill) {
 
                 $pills[] = array(
+                    'id' => $pill->id,
                     'name' => $pill->name,
                     'description' => $pill->description,
                     'numberOfIntakes' => $pill->numberOfIntakes,
